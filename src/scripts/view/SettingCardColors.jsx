@@ -1,6 +1,6 @@
 import React from 'react';
 import ColorPicker from '../components/ColorPicker';
-import BackgroundPicker from '../components/BackgroundPicker';
+import BackgroundPicker from '../components/background-picker/BackgroundPicker';
 
 export default class CardColors extends React.Component {
     constructor(props) {
@@ -51,7 +51,7 @@ export default class CardColors extends React.Component {
                                      id="cardSenderColor"/>
                         <ColorPicker callback={this.handleChange} settings={this.props.settings}
                                      label="Цвет полей ввода"
-                                     id="cardFieldSenderColor" presets={['#7E6DDD', '#41E0EC', '#E6930C']}/>
+                                     id="cardFieldSenderColor" presets={['#151a23', '#8791a2', '#ffffff']}/>
                     </div>
                     <div className="picker__col">
                         <h4 className="picker__title">Карта получателя</h4>
@@ -70,7 +70,7 @@ export default class CardColors extends React.Component {
                                      id="cardSenderStrokeColor"/>
                         <ColorPicker callback={this.handleChange} settings={this.props.settings}
                                      label="Цвет полей ввода"
-                                     id="cardFieldSenderColor" presets={['#31EC39', '#ECEC31', '#31A6EC']}/>
+                                     id="cardFieldSenderColor" presets={['#151a23', '#8791a2', '#ffffff']}/>
                     </div>
                     <div className="picker__col">
                         <h4 className="picker__title">Карта получателя</h4>
@@ -79,7 +79,7 @@ export default class CardColors extends React.Component {
                                      id="cardRecipientStrokeColor"/>
                         <ColorPicker callback={this.handleChange} settings={this.props.settings}
                                      label="Цвет полей ввода"
-                                     id="cardFieldRecipientColor" presets={['#555167', '#516765', '#0A3E39']}/>
+                                     id="cardFieldRecipientColor" presets={['#151a23', '#8791a2', '#ffffff']}/>
                     </div>
                 </div>
                 <div className="picker" style={{display: activeTab == 'cardImage' ? 'block' : 'none'}}>
@@ -89,7 +89,7 @@ export default class CardColors extends React.Component {
                                           label="Цвет фона" id="cardSenderImage"/>
                         <ColorPicker callback={this.handleChange} settings={this.props.settings}
                                      label="Цвет полей ввода"
-                                     id="cardFieldSenderColor" presets={['#26137E', '#137E7E', '#7E2013']}/>
+                                     id="cardFieldSenderColor" presets={['#151a23', '#8791a2', '#ffffff']}/>
                     </div>
                     <div className="picker__col">
                         <h4 className="picker__title">Карта получателя</h4>
@@ -98,7 +98,7 @@ export default class CardColors extends React.Component {
                                           id="cardRecipientImage"/>
                         <ColorPicker callback={this.handleChange} settings={this.props.settings}
                                      label="Цвет полей ввода"
-                                     id="cardFieldRecipientColor" presets={['#4C3F80', '#6D803F', '#ffffff']}/>
+                                     id="cardFieldRecipientColor" presets={['#151a23', '#8791a2', '#ffffff']}/>
                     </div>
                 </div>
             </div>

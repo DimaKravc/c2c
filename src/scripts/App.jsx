@@ -90,10 +90,10 @@ export default class App extends React.Component {
                     </header>
                     <div className="frame-setting__primary">
                         <div className="frame-setting__primary-col">
-                            <SettingsView callback={this.handleChange} settings={this.state}/>
+                            <FrameView callback={this.handleChange} settings={this.state}/>
                         </div>
                         <div className="frame-setting__primary-col">
-                            <FrameView callback={this.handleChange} settings={this.state}/>
+                            <SettingsView callback={this.handleChange} settings={this.state}/>
                         </div>
                     </div>
                     <div className="frame-setting__footer">
