@@ -1,6 +1,6 @@
 import React from 'react';
 import ColorPicker from '../components/ColorPicker';
-import BackgroundPicker from '../components/BackgroundPicker';
+import BackgroundPicker from '../components/background-picker/BackgroundPicker';
 
 export default class FrameColors extends React.Component {
     constructor(props) {

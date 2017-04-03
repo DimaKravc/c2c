@@ -1,4 +1,6 @@
 import React from 'react';
+import CSS from '../components/stylesheet';
+
 export default class FrameView extends React.Component {
     constructor(props) {
         super(props);
@@ -69,100 +71,16 @@ export default class FrameView extends React.Component {
                     this.copyTrigger.text = 'скопировать';
                     this.copyTrigger.className = classesArr.join(' ');
                 }.bind(this),
-                2000);
+            2000);
         } catch (err) {
-            console.log('Oops, unable to copy');
+            console.info('Oops, unable to copy');
         }
 
         window.getSelection().removeAllRanges();
     };
 
     render() {
-        let settings = this.props.settings,
-            styles = {
-                frameStyles: {
-                    width: (() => {
-                        return settings.frameWidth > 600 ? '600px' : settings.frameWidth + 'px';
-                    })(),
-                    background: settings.frameBgColor
-                },
-                underCardStyles: {
-                    background: settings.cardUnderBgColor
-                },
-                controlsStyles: {
-                    color: settings.controlsColor
-                },
-                cardSender: {
-                    color: settings.cardSettingsShow ? settings.cardFieldSenderColor : null,
-                    style: (()=>{
-                        if (settings.cardBg === 'cardImage') {
-                            return "border-color: transparent !important; background-color: transparent !important; background-image: url('" + settings.cardSenderImage + "') !important;"
-                        } else if (settings.cardBg === 'cardStroke') {
-                            return "background: none !important; border-color:" + (settings.cardSenderStrokeColor ? settings.cardSenderStrokeColor : "transparent" ) + " !important;"
-                        } else if (settings.cardBg === 'cardColor') {
-                            return "background-color:" + settings.cardSenderColor + " !important;" + "border-color:" + settings.cardSenderColor + " !important;";
-                        }
-                    })()
-                },
-                cardRecipient: {
-                    color: settings.cardSettingsShow ? settings.cardFieldRecipientColor : null,
-                    style: (()=>{
-                        if (settings.cardBg === 'cardImage') {
-                            return "border-color: transparent !important; background-color: transparent !important; background-image: url('" + settings.cardRecipientImage + "') !important;"
-                        } else if (settings.cardBg === 'cardStroke') {
-                            return "background: none !important; border-color:" + (settings.cardRecipientStrokeColor ? settings.cardRecipientStrokeColor : "transparent" ) + " !important;"
-                        } else if (settings.cardBg === 'cardColor') {
-                            return "background-color:" + settings.cardRecipientColor + " !important;" + "border-color:" + settings.cardRecipientColor + " !important;";
-                        }
-                    })()
-                }
-            },
-            css = `
-                .c2c__inner-overlay {
-                     background-color: ` + styles.frameStyles.background + ` !important;
-                }
-                .block-cards {
-                    background-color: ` + styles.underCardStyles.background + ` !important;
-                }
-                .block-cards__card-one__wrap__new-card,
-                .block-btn-pay__text-info a,
-                 footer .feedback {
-                    color: ` + styles.controlsStyles.color + ` !important;
-                }
-                .block-btn-pay input[type="submit"] {
-                    background-color: ` + styles.controlsStyles.color + ` !important;
-                }
-                .block-cards__card-one input::-webkit-input-placeholder {
-                    color: ` + styles.cardSender.color + ` !important;
-                }
-                .block-cards__card-one input::-moz-placeholder {
-                    color: ` + styles.cardSender.color + ` !important;
-                }
-                .block-cards__card-one label {
-                    color: ` + styles.cardSender.color + ` !important;
-                }
-                .block-cards__card-one .border-bottom {
-                    border-color: ` + styles.cardSender.color + ` !important;
-                }
-                .block-cards__card-two input::-webkit-input-placeholder {
-                    color: ` + styles.cardRecipient.color + ` !important;
-                }
-                .block-cards__card-two input::-moz-placeholder {
-                    color: ` + styles.cardRecipient.color + ` !important;
-                }
-                .block-cards__card-two label {
-                    color: ` + styles.cardRecipient.color + ` !important;
-                }
-                .block-cards__card-two .border-bottom {
-                    border-color: ` + styles.cardRecipient.color + ` !important;
-                }
-                .card-sender-style {
-                    `+ styles.cardSender.style +`
-                }
-                .card-recipient-style {
-                     `+ styles.cardRecipient.style +`
-                }
-            `;
+        let settings = this.props.settings;
         return (
             <div style={{width: settings.frameWidth > settings.sizes[1] ? settings.sizes[1] : settings.frameWidth, margin: "auto"}} className={settings.frameWidth != settings.sizes[0] ? "size-sm" : "size-xs"}>
                 <div className="controls-show">
@@ -170,7 +88,7 @@ export default class FrameView extends React.Component {
                     <a href="#" onClick={this.handleShowHtml}>ПОКАЗАТЬ HTML</a>
                 </div>
                 <div className="c2c">
-                    <style>{css}</style>
+                    <CSS settings={this.props.settings}/>
                     <div className="c2c__inner-overlay">
                         <div className="c2c-code-wrap" style={{display: this.state.codeShow ? 'flex' : 'none'}}>
                             <a className="c2c-code__close" href="#" onClick={this.handleHideHtml}>&nbsp;</a>
@@ -198,7 +116,7 @@ export default class FrameView extends React.Component {
                                             <span className="icon-io icon-new-card">&nbsp;</span>Новая карта
                                         </div>
                                     </div>
-                                    <div className={"block-cards__card-one__card card-sender-style" + (settings.cardBg === 'cardImage' ? " img-bg" : '')}>
+                                    <div className={"block-cards__card-one__card card-sender-style" + (settings.cardBg === "cardImage" ? " img-bg" : "")}>
                                         <div className="wrap-mps">
                                             <div className="bank-logo">
                                                 <i className="bank-icon animated">&nbsp;</i>
