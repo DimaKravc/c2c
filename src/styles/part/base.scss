@@ -850,6 +850,11 @@ body {
 				background-color: #00b8d4;
 			}
 		}
+		&.disabled {
+			background: #90a4ae;
+			border-color: #90a4ae;
+			pointer-events: none;
+		}
 	}
 
 	.input-checkbox {

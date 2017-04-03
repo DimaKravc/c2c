@@ -6855,6 +6855,12 @@ body {
     background-color: #00b8d4;
 }
 
+.style-cover-app .app-control.disabled {
+    background: #90a4ae;
+    border-color: #90a4ae;
+    pointer-events: none;
+}
+
 .style-cover-app .input-checkbox {
     display: none;
 }

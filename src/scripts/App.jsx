@@ -52,9 +52,24 @@ export default class App extends React.Component {
     handleSave(e) {
         e.preventDefault();
 
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", '/iframe.php', true);
-        xhr.send(JSON.stringify(this.state));
+        /* Ajax request code here */
+
+        let saveTrigger = e.target;
+        saveTrigger.text = 'сохранено';
+        saveTrigger.className += ' disabled';
+
+        setTimeout(
+            function () {
+                let classesArr = saveTrigger.className.split(' '),
+                    classIndex = classesArr.indexOf('disabled');
+                if (~classIndex) {
+                    classesArr.splice(classIndex, 1);
+                }
+
+                saveTrigger.text = 'сохранить настройки';
+                saveTrigger.className = classesArr.join(' ');
+            },
+        2000);
     };
 
     componentDidMount() {
