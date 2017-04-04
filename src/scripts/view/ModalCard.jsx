@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-const bankCollection = [
+const BANK_COLLECTION = [
     {
         bin: "1234 0000 0000 0000",
         bankIcon: "alfa",
@@ -10,7 +10,7 @@ const bankCollection = [
     },
     {
         bin: "4158 8100 0000 0000",
-        bankIcon: "rosevro",
+        bankIcon: "rosevrobank",
         systemIcon: "visa",
         bg: "#5e2e50"
     },
@@ -29,49 +29,49 @@ const bankCollection = [
     {
         bin: "5170 7900 0000 0000",
         bankIcon: "bsp",
-        systemIcon: "rost",
+        systemIcon: "mc",
         bg: "#db1e33"
     },
     {
         bin: "5304 0000 0000 0000",
         bankIcon: "otkrytie",
-        systemIcon: "rost",
+        systemIcon: "mc",
         bg: "#00bae3"
     },
     {
         bin: "5570 0000 0000 0000",
-        bankIcon: "brs",
-        systemIcon: "rost",
+        bankIcon: "ceb",
+        systemIcon: "mc",
         bg: "#dc3b41"
     },
     {
         bin: "5586 0000 0000 0000",
         bankIcon: "hmb",
-        systemIcon: "rost",
+        systemIcon: "mc",
         bg: "#005a51"
     },
     {
         bin: "1234 0000 0000 0000",
         bankIcon: "hcb",
-        systemIcon: "zenit",
+        systemIcon: "mir",
         bg: "#e21837"
     },
     {
         bin: "2204 8800 0000 0000",
         bankIcon: "cmpb",
-        systemIcon: "zenit",
+        systemIcon: "mir",
         bg: "#004772"
     },
     {
         bin: "1234 0000 0000 0000",
         bankIcon: "uniastrum",
-        systemIcon: "zenit",
+        systemIcon: "mir",
         bg: "#005d70"
     },
     {
         bin: "4062 0000 0000 00000",
         bankIcon: "locko",
-        systemIcon: "zenit",
+        systemIcon: "mir",
         bg: "#0054a5"
     }
 ];
@@ -108,11 +108,11 @@ export default class ModalDialog extends React.Component {
                     if (i == 4) {
                         this.bankIcon.style.backgroundImage = this.props.style == "stroke" ?
                         "url(img_opt/frame-customization/" + item.bankIcon + "-bl.svg)" :
-                        "url(img_opt/frame-customization/" + item.bankIcon + ".svg)";
+                        "url(img_opt/frame-customization/" + item.bankIcon + "-wh.svg)";
 
                         this.systemIcon.style.backgroundImage = this.props.style == "stroke" ?
                             "url(img_opt/frame-customization/" + item.systemIcon + "-bl.svg)" :
-                            "url(img_opt/frame-customization/" + item.systemIcon + ".svg)";
+                            "url(img_opt/frame-customization/" + item.systemIcon + "-wh.svg)";
 
                         // check bankSettingsType options (color||stroke)
                         this.props.style == "color" ? this.card.style.backgroundColor = item.bg : this.card.style.borderColor = item.bg;
@@ -132,14 +132,14 @@ export default class ModalDialog extends React.Component {
         // start a typewriter animation for a text in the bankCollection array
         let startWrite = (i) => {
             // check if bankCollection[i] not exists
-            if (typeof bankCollection[i] == "undefined") {
+            if (typeof BANK_COLLECTION[i] == "undefined") {
                 // start a typewriter animation from the start
                 setTimeout(()=> {
                     startWrite(0)
                 }, 200000)
             } else {
                 // start a typewriter animation from the next item
-                typeWrite(bankCollection[i], 0, ()=> {
+                typeWrite(BANK_COLLECTION[i], 0, ()=> {
                     startWrite(++i)
                 })
             }

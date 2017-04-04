@@ -7004,8 +7004,8 @@ body {
 
 .style-cover-app .block-cards.colors-preview .block-cards__card-one {
     margin: 0;
-    width: 29.64rem;
-    max-width: 29.64rem;
+    width: 30rem;
+    max-width: 30rem;
 }
 
 .style-cover-app .block-cards.colors-preview .block-cards__card-one.stroke-style .block-cards__card-one__card {
@@ -7026,8 +7026,10 @@ body {
 
 .style-cover-app .block-cards.colors-preview .block-cards__card-one__card {
     background: #4bbabb;
-    max-height: 17.355rem;
-    height: 17.355rem;
+    max-height: 17.5rem;
+    height: 17.5rem;
+    padding: 1.7rem 1.5rem 2.5rem 2.4rem;
+    border-radius: 1.2rem;
 }
 
 .style-cover-app .block-cards.colors-preview .block-cards__card-one__card.identified .wrap-mps .bank-icon {
@@ -7045,17 +7047,17 @@ body {
 }
 
 .style-cover-app .block-cards.colors-preview .block-cards__card-one__card .block-cards__card-one__card__card-number {
-    margin: 0 0 1.716rem;
+    margin: -0.4rem 0 2.1rem;
 }
 
 .style-cover-app .block-cards.colors-preview .block-cards__card-one__card .block-cards__card-one__card__card-number label {
     font-size: 0.975rem;
-    padding: 0 0 0.624rem 0.312rem;
+    padding: 0 0 0.7rem 0.312rem;
 }
 
 .style-cover-app .block-cards.colors-preview .block-cards__card-one__card .block-cards__card-one__card__card-number .block-cards__card-one__card__card-number__wrap-input input {
     font-size: 1.8532rem;
-    padding: 0 0 0.312rem 0.468rem;
+    padding: 0 0 0.1rem 0.468rem;
 }
 
 .style-cover-app .block-cards.colors-preview .block-cards__card-one__card .block-cards__card-one__card__expire-date {
@@ -7064,31 +7066,35 @@ body {
 
 .style-cover-app .block-cards.colors-preview .block-cards__card-one__card .block-cards__card-one__card__expire-date label {
     font-size: 0.975rem;
-    padding: 0 0 0.78rem 0.468rem;
+    padding: 0 0 0.7rem 0.1rem;
+}
+
+.style-cover-app .block-cards.colors-preview .block-cards__card-one__card .block-cards__card-one__card__expire-date .block-cards__card-one__card__expire-date__wrap-input {
+    width: 68%;
 }
 
 .style-cover-app .block-cards.colors-preview .block-cards__card-one__card .block-cards__card-one__card__expire-date .block-cards__card-one__card__expire-date__wrap-input input {
     font-size: 1.2675rem;
-    padding: 0 0 0.546rem 0.468rem;
+    padding: 0 0 0.2rem 0.3rem;
 }
 
 .style-cover-app .block-cards.colors-preview .block-cards__card-one__card .block-cards__card-one__card__cvc label {
     font-size: 0.975rem;
-    padding: 0 0 0.78rem;
+    padding: 0 0 0.7rem;
 }
 
 .style-cover-app .block-cards.colors-preview .block-cards__card-one__card .block-cards__card-one__card__cvc .block-cards__card-one__card__cvc__wrap-input input {
     font-size: 1.2675rem;
-    padding: 0 0 0.546rem 0.468rem;
+    padding: 0 0 0.2rem 0.3rem;
 }
 
 .style-cover-app .block-cards.colors-preview .wrap-mps {
-    margin: 0 0 0.42rem;
+    margin: 0;
 }
 
 .style-cover-app .block-cards.colors-preview .wrap-mps .bank-logo {
-    width: 2.75rem;
-    height: 1.25rem;
+    width: 2.8rem;
+    height: 2.72rem;
     line-height: normal;
     vertical-align: middle;
 }
@@ -7101,8 +7107,8 @@ body {
 }
 
 .style-cover-app .block-cards.colors-preview .wrap-mps .block-cards__card-one__card__mps {
-    width: 3.5rem;
-    height: 1.5rem;
+    width: 2.8rem;
+    height: 2.72rem;
     line-height: normal;
     vertical-align: middle;
 }

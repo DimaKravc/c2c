@@ -1,6 +1,6 @@
 import React from 'react';
 
-const stylesheet = ({settings}) => {
+const STYLESHEET = ({settings}) => {
     let generateRules = () => {
         let styles = {
             frameStyles: {
@@ -77,4 +77,4 @@ const stylesheet = ({settings}) => {
     );
 };
 
-export default stylesheet;
+export default STYLESHEET;
