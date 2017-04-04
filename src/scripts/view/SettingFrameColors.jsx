@@ -9,6 +9,7 @@ export default class FrameColors extends React.Component {
         this.handleCardSettings = this.handleCardSettings.bind(this);
         this.handleRadioChange = this.handleRadioChange.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.handleModalCard = this.handleModalCard.bind(this);
     };
 
     handleCardSettings(e) {
@@ -38,6 +39,15 @@ export default class FrameColors extends React.Component {
         this.props.callback(set);
     };
 
+    handleModalCard(e) {
+        e.preventDefault();
+
+        this.props.callback({
+            id: "showModalCard",
+            prop: true
+        })
+    }
+
     render() {
         return (
             <div className="setting-item">
@@ -60,7 +70,7 @@ export default class FrameColors extends React.Component {
                     </div>
                 </div>
                 <div className="bank-design" style={{display: this.props.settings.cardSettingsShow ? 'none' : 'block'}}>
-                    <p>По умолчанию, карты меняют свой цвет в зависимости от банка, <br/>выпустившего карту. <a href="#">Как это работает?</a>
+                    <p>По умолчанию, карты меняют свой цвет в зависимости от банка, <br/>выпустившего карту. <a href="#" onClick={this.handleModalCard}>Как это работает?</a>
                     </p>
                     <div className="bank-design__form">
                         <div className="bank-design__formgroup">

@@ -30,7 +30,8 @@ const stylesheet = ({settings}) => {
                     } else {
                         return '';
                     }
-                })()
+                })(),
+                controlsWrap: settings.authByPhone ? "visible" : "hidden"
             },
             cardRecipient: {
                 color: settings.cardSettingsShow ? settings.cardFieldRecipientColor : null,
@@ -50,24 +51,24 @@ const stylesheet = ({settings}) => {
                 })()
             }
         };
-       return `
-            .c2c__inner-overlay { background-color: ` + styles.frameStyles.background + ` !important; }
-            .block-cards { background-color: ` + styles.underCardStyles.background + ` !important; }
-            .block-cards__card-one__wrap__new-card,
-            .block-btn-pay__text-info a,
-            footer .feedback { color: ` + styles.controlsStyles.color + ` !important; }
-            .block-btn-pay input[type="submit"] { background-color: ` + styles.controlsStyles.color + ` !important; }
-            .block-cards__card-one input::-webkit-input-placeholder {  color: ` + styles.cardSender.color + ` !important; }
-            .block-cards__card-one input::-moz-placeholder { color: ` + styles.cardSender.color + ` !important; }
-            .block-cards__card-one label { color: ` + styles.cardSender.color + ` !important; }
-            .block-cards__card-one .border-bottom { border-color: ` + styles.cardSender.color + ` !important; }
-            .block-cards__card-two input::-webkit-input-placeholder { color: ` + styles.cardRecipient.color + ` !important; }
-            .block-cards__card-two input::-moz-placeholder { color: ` + styles.cardRecipient.color + ` !important; }
-            .block-cards__card-two label { color: ` + styles.cardRecipient.color + ` !important; }
-            .block-cards__card-two .border-bottom { border-color: ` + styles.cardRecipient.color + ` !important; }
-            .card-sender-style { ` + styles.cardSender.style + ` }
-            .card-recipient-style { ` + styles.cardRecipient.style + ` }
-            `
+        return`
+        .c2c__inner-overlay { background-color: ` + styles.frameStyles.background + ` !important; }
+        .block-cards { background-color: ` + styles.underCardStyles.background + ` !important; }
+        .block-cards__card-one__wrap__new-card,
+        .block-btn-pay__text-info a, footer .feedback { color: ` + styles.controlsStyles.color + ` !important; }
+        .block-btn-pay input[type="submit"] { background-color: ` + styles.controlsStyles.color + ` !important; }
+        .block-cards__card-one input::-webkit-input-placeholder {  color: ` + styles.cardSender.color + ` !important; }
+        .block-cards__card-one input::-moz-placeholder { color: ` + styles.cardSender.color + ` !important; }
+        .block-cards__card-one label { color: ` + styles.cardSender.color + ` !important; }
+        .block-cards__card-one .border-bottom { border-color: ` + styles.cardSender.color + ` !important; }
+        .block-cards__card-two input::-webkit-input-placeholder { color: ` + styles.cardRecipient.color + ` !important; }
+        .block-cards__card-two input::-moz-placeholder { color: ` + styles.cardRecipient.color + ` !important; }
+        .block-cards__card-two label { color: ` + styles.cardRecipient.color + ` !important; }
+        .block-cards__card-two .border-bottom { border-color: ` + styles.cardRecipient.color + ` !important; }
+        .card-sender-style { ` + styles.cardSender.style + ` }
+        .card-recipient-style { ` + styles.cardRecipient.style + ` }
+        .block-cards__card-one__wrap { visibility:` + styles.cardSender.controlsWrap + `}
+        `
     };
     return (
         <style>

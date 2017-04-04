@@ -148,19 +148,6 @@ export default class FrameView extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="block-cards__card-one__card-checked">
-                                        <div className="wrap-mps">
-                                            <div className="bank-logo">
-                                                <i className="bank-icon animated"></i>
-                                            </div>
-                                            <div className="block-cards__card-one__card__mps">
-                                                <i className="mps-icon animated"></i>
-                                            </div>
-                                        </div>
-                                        <div className="block-cards__card-one__card-checked__num-wrap">
-                                            <span className="block-cards__card-one__card-checked__num-wrap__num">9878 65** **** 8221</span>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div className="block-cards__card-two">
                                     <div className="animated fadeInRight">

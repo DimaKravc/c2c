@@ -1,12 +1,12 @@
 {
-  "name": "c2c",
+  "name": "paymo.c2c",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "DimaKravc",
+  "author": "DimaKravc: dimakravchenko.w@gmail.com",
   "license": "ISC",
   "dependencies": {
     "rc-slider": "^6.1.2",

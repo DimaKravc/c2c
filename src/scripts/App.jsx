@@ -1,6 +1,7 @@
 import React from 'react';
 import SettingsView from './view/SettingsView';
 import FrameView from './view/FrameView';
+import ModalCard from './view/ModalCard';
 
 export default class App extends React.Component {
     constructor(props) {
@@ -29,7 +30,9 @@ export default class App extends React.Component {
             cardRecipientImage: null,
 
             authByPhone: true,
-            url: "https://checkout.paymo.ru/card2cardframe/?api_key=" + window.api_key
+            url: "https://checkout.paymo.ru/card2cardframe/?api_key=" + window.api_key,
+            
+            showModalCard: false
         };
 
         this.defaultState = this.state;
@@ -69,13 +72,13 @@ export default class App extends React.Component {
                 saveTrigger.text = 'сохранить настройки';
                 saveTrigger.className = classesArr.join(' ');
             },
-        2000);
+            2000);
     };
 
     componentDidMount() {
         document.getElementsByClassName('app-preload')[0].style.display = 'none';
     };
-    
+
     render() {
         return (
             <div className="frame-setting style-cover-app">
@@ -116,6 +119,7 @@ export default class App extends React.Component {
                         <a className="app-control type-fill" href="#" onClick={this.handleSave}>СОХРАНИТЬ НАСТРОЙКИ</a>
                     </div>
                 </div>
+                <ModalCard callback={this.handleChange} show={this.state.showModalCard} style={this.state.bankSettingsType}/>
             </div>
         )
     };

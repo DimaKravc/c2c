@@ -6961,6 +6961,159 @@ body {
     line-height: 1.4285rem;
 }
 
+.style-cover-app .modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    outline: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: rgba(247, 248, 249, 0.95);
+}
+
+.style-cover-app .modal__dialog {
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.style-cover-app .modal__content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.style-cover-app .modal__controls {
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.style-cover-app .block-cards.colors-preview {
+    background: none;
+    margin: 50px auto;
+    padding: 0;
+    display: block;
+    width: 100%;
+}
+
+.style-cover-app .block-cards.colors-preview .block-cards__card-one {
+    margin: 0;
+    width: 29.64rem;
+    max-width: 29.64rem;
+}
+
+.style-cover-app .block-cards.colors-preview .block-cards__card-one.stroke-style .block-cards__card-one__card {
+    background: transparent;
+    border: 3px solid #4bbabb;
+    -webkit-transition: border-color 0.2s cubic-bezier(0.4, 0, 1, 1);
+    transition: border-color 0.2s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.style-cover-app .block-cards.colors-preview .block-cards__card-one.stroke-style .block-cards__card-one__card label,
+.style-cover-app .block-cards.colors-preview .block-cards__card-one.stroke-style .block-cards__card-one__card input {
+    color: #000000;
+}
+
+.style-cover-app .block-cards.colors-preview .block-cards__card-one.stroke-style .block-cards__card-one__card .border-bottom {
+    border-color: #000000;
+}
+
+.style-cover-app .block-cards.colors-preview .block-cards__card-one__card {
+    background: #4bbabb;
+    max-height: 17.355rem;
+    height: 17.355rem;
+}
+
+.style-cover-app .block-cards.colors-preview .block-cards__card-one__card.identified .wrap-mps .bank-icon {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+}
+
+.style-cover-app .block-cards.colors-preview .block-cards__card-one__card.identified .wrap-mps .mps-icon {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+}
+
+.style-cover-app .block-cards.colors-preview .block-cards__card-one__card .block-cards__card-one__card__card-number {
+    margin: 0 0 1.716rem;
+}
+
+.style-cover-app .block-cards.colors-preview .block-cards__card-one__card .block-cards__card-one__card__card-number label {
+    font-size: 0.975rem;
+    padding: 0 0 0.624rem 0.312rem;
+}
+
+.style-cover-app .block-cards.colors-preview .block-cards__card-one__card .block-cards__card-one__card__card-number .block-cards__card-one__card__card-number__wrap-input input {
+    font-size: 1.8532rem;
+    padding: 0 0 0.312rem 0.468rem;
+}
+
+.style-cover-app .block-cards.colors-preview .block-cards__card-one__card .block-cards__card-one__card__expire-date {
+    margin: 0 2.028rem 0 0;
+}
+
+.style-cover-app .block-cards.colors-preview .block-cards__card-one__card .block-cards__card-one__card__expire-date label {
+    font-size: 0.975rem;
+    padding: 0 0 0.78rem 0.468rem;
+}
+
+.style-cover-app .block-cards.colors-preview .block-cards__card-one__card .block-cards__card-one__card__expire-date .block-cards__card-one__card__expire-date__wrap-input input {
+    font-size: 1.2675rem;
+    padding: 0 0 0.546rem 0.468rem;
+}
+
+.style-cover-app .block-cards.colors-preview .block-cards__card-one__card .block-cards__card-one__card__cvc label {
+    font-size: 0.975rem;
+    padding: 0 0 0.78rem;
+}
+
+.style-cover-app .block-cards.colors-preview .block-cards__card-one__card .block-cards__card-one__card__cvc .block-cards__card-one__card__cvc__wrap-input input {
+    font-size: 1.2675rem;
+    padding: 0 0 0.546rem 0.468rem;
+}
+
+.style-cover-app .block-cards.colors-preview .wrap-mps {
+    margin: 0 0 0.42rem;
+}
+
+.style-cover-app .block-cards.colors-preview .wrap-mps .bank-logo {
+    width: 2.75rem;
+    height: 1.25rem;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.style-cover-app .block-cards.colors-preview .wrap-mps .bank-logo .bank-icon {
+    vertical-align: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.style-cover-app .block-cards.colors-preview .wrap-mps .block-cards__card-one__card__mps {
+    width: 3.5rem;
+    height: 1.5rem;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.style-cover-app .block-cards.colors-preview .wrap-mps .block-cards__card-one__card__mps .mps-icon {
+    vertical-align: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .style-cover-app .size-xs .controls-show a {
     float: none;
     display: block;
