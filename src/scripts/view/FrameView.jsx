@@ -99,8 +99,7 @@ export default class FrameView extends React.Component {
                             <div className="block-phone-wrap">
                                 <label htmlFor="phone">Ваш номер телефона:</label>
                                 <div className="wrap-phone-input">
-                                    <input type="phone" id="phone" defaultValue="+7 (232) 234-45-56"/>
-                                    <span className="error-wrap-icon"><i className="error-wrap-icon__icon">&nbsp;</i></span>
+                                    <input type="phone" id="phone" placeholder="+7 (232) 234-45-56"/>
                                 </div>
                             </div>
                         </div>
@@ -128,23 +127,20 @@ export default class FrameView extends React.Component {
                                         <div className="block-cards__card-one__card__card-number">
                                             <label htmlFor="card_num">Номер карты:</label>
                                             <div className="block-cards__card-one__card__card-number__wrap-input border-bottom">
-                                                <input type="text" defaultValue="" title="" placeholder="0000 0000 0000 0000" id="card_num"/>
-                                                <span className="error-wrap-icon"><i className="error-wrap-icon__icon">&nbsp;</i></span>
+                                                <input type="text" placeholder="0000 0000 0000 0000" id="card_num"/>
                                             </div>
                                         </div>
                                         <div className="block-cards__card-one__card__expire-date">
                                             <label htmlFor="expire_date">Срок действия:</label>
                                             <div className="block-cards__card-one__card__expire-date__wrap-input border-bottom">
-                                                <input defaultValue="text" value="" title="" placeholder="04/18" id="expire_date"/>
-                                                <span className="error-wrap-icon"><i className="error-wrap-icon__icon">&nbsp;</i>&gt;</span>
+                                                <input placeholder="04/18" id="expire_date"/>
                                             </div>
                                         </div>
                                         <div className="block-cards__card-one__card__cvc">
                                             <label htmlFor="cvc">cvc/cvv2:<span className="cvc-icon"><i
                                                 className="cvc-icon__help">3 последние цифры на оборотной стороне карты</i></span></label>
                                             <div className="block-cards__card-one__card__cvc__wrap-input border-bottom">
-                                                <input type="text" defaultValue="" title="" placeholder="•••" id="cvc"/>
-                                                <span className="error-wrap-icon"><i className="error-wrap-icon__icon"></i>&gt;</span>
+                                                <input type="text" placeholder="•••" id="cvc"/>
                                             </div>
                                         </div>
                                     </div>
@@ -154,18 +150,17 @@ export default class FrameView extends React.Component {
                                         <div className={"block-cards__card-two__card  card-recipient-style" + (settings.cardBg === 'cardImage' ? " img-bg" : '')}>
                                             <div className="wrap-mps">
                                                 <div className="bank-logo">
-                                                    <i className="bank-icon animated"></i>
+                                                    <i className="bank-icon animated">&nbsp;</i>
                                                 </div>
                                                 <div className="block-cards__card-two__card__mps">
-                                                    <i className="mps-icon animated"></i>
+                                                    <i className="mps-icon animated">&nbsp;</i>
                                                 </div>
                                             </div>
                                             <div className="block-cards__card-two__card__card-number">
                                                 <label htmlFor="card_num_two">Номер карты:</label>
                                                 <div className="block-cards__card-two__card__card-number__wrap-input border-bottom">
-                                                    <input type="text" defaultValue="" title="" placeholder="0000 0000 0000 0000"
+                                                    <input type="text" placeholder="0000 0000 0000 0000"
                                                            id="card_num_two"/>
-                                                    <span className="error-wrap-icon"><i className="error-wrap-icon__icon"></i>&gt;</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -175,7 +170,7 @@ export default class FrameView extends React.Component {
                             <div className="block-sum">
                                 <div className="block-sum__sum-total">
                                     <label htmlFor="sum_total">Сумма перевода:</label>
-                                    <input type="text" defaultValue="" title="" placeholder="1000.00" id="sum_total"/>
+                                    <input type="text" placeholder="1000.00" id="sum_total"/>
                                     <span className="block-sum__sum-total__text-info">Минимальная сумма: 100 <span className="ruble">q</span></span>
                                 </div>
                                 <div className="block-sum__sum-commission">
@@ -188,84 +183,8 @@ export default class FrameView extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="block-main-wrap-content">
-                            <div className="block-loading">
-                                <div className="block-loading__wrap">
-                                    <div className="block-loading__wrap__icon"></div>
-                                    <div className="block-loading__wrap__label">Производится оплата...</div>
-                                </div>
-                            </div>
-                            <div className="block-error">
-                                <div className="block-error__icon-error"></div>
-                                <div className="block-error__wrap-text-error">
-                                    <div className="block-error__wrap-text-error__title">Платеж не совершен:</div>
-                                    <div className="block-error__wrap-text-error__cause">Нет ответа от банка</div>
-                                </div>
-                                <div className="block-error__wrap-btn-repeat">
-                                    <input type="submit" defaultValue="Повторить" title=""/>
-                                </div>
-                                <div className="block-error__edit-pay">
-                                    <div className="block-error__edit-pay__btn">Редактировать платеж</div>
-                                </div>
-                            </div>
-                            <div className="block-sucsses">
-                                <div className="block-sucsses__wrap__left">
-                                    <div className="block-sucsses__wrap__left__wrap-icon">
-                                        <div className="block-sucsses__wrap__left__wrap-icon__icon"></div>
-                                    </div>
-                                    <div className="block-sucsses__wrap__left__label">
-                                        Платеж <span className="block-sucsses__wrap__left__label__num">2346669960</span> прошел успешно!
-                                    </div>
-                                </div>
-                                <div className="block-sucsses__wrap__right">
-                                    <div className="block-sucsses__wrap__right__data">
-                                        <div className="block-sucsses__wrap__right__data__row">
-                                            <div className="block-sucsses__wrap__right__data__cell color-gray">Номер телефона:</div>
-                                            <div className="block-sucsses__wrap__right__data__cell">+7 (234) 555-46-56</div>
-                                        </div>
-                                        <div className="block-sucsses__wrap__right__data__row">
-                                            <div className="block-sucsses__wrap__right__data__cell color-gray">Сумма платежа:</div>
-                                            <div className="block-sucsses__wrap__right__data__cell">15 300 Р</div>
-                                        </div>
-                                        <div className="block-sucsses__wrap__right__data__row">
-                                            <div className="block-sucsses__wrap__right__data__cell color-gray">Карта отправителя:</div>
-                                            <div className="block-sucsses__wrap__right__data__cell">9999 99** **** 9999</div>
-                                        </div>
-                                        <div className="block-sucsses__wrap__right__data__row">
-                                            <div className="block-sucsses__wrap__right__data__cell color-gray">Карта получателя:</div>
-                                            <div className="block-sucsses__wrap__right__data__cell">9999 99** **** 9999</div>
-                                        </div>
-                                        <div className="block-sucsses__wrap__right__data__row">
-                                            <div className="block-sucsses__wrap__right__data__cell color-gray">Дата и время платежа:</div>
-                                            <div className="block-sucsses__wrap__right__data__cell">20.03.2016 23:56</div>
-                                        </div>
-                                    </div>
-                                    <div className="block-sucsses__wrap__right__wrap-send-email">
-                                        <div className="block-sucsses__wrap__right__wrap-send-email__label">
-                                            <span className="block-sucsses__wrap__right__wrap-send-email__label__icon"></span>Отправить квитанцию на email
-                                        </div>
-                                        <div className="block-sucsses__wrap__right__wrap-send-email__form-email">
-                                            <div className="block-sucsses__wrap__right__wrap-send-email__form-email__close"></div>
-                                            <div className="block-sucsses__wrap__right__wrap-send-email__form-email__textarea">
-                                                <div className="block-sucsses__wrap__right__wrap-send-email__form-email__textarea__input-text">
-                                                    <input type="text" defaultValue="" title="" placeholder="Введите ваш email"/>
-                                                </div>
-                                                <div className="block-sucsses__wrap__right__wrap-send-email__form-email__textarea__input-sub">
-                                                    <input type="submit" defaultValue="Отправить" title=""/>
-                                                </div>
-                                            </div>
-                                            <div className="block-sucsses__wrap__right__wrap-send-email__form-email__text-info">
-                                                <div className="block-sucsses__wrap__right__wrap-send-email__form-email__text-info__text">
-                                                    Мы отправили письмо с деталями платежа на email, который вы указали.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div className="block-btn-pay">
-                            <input type="submit" value="Перевести" title=""/>
+                            <input type="submit" value="Перевести"/>
                             <div className="block-btn-pay__text-info">Нажимая на кнопку «Перевести»,<br />
                                 вы соглашаетесь c условиями публичной <a href="#">оферты.</a>
                             </div>

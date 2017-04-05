@@ -81,6 +81,7 @@ export default class ModalDialog extends React.Component {
         super(props);
 
         this.handleModalCard = this.handleModalCard.bind(this);
+        this.handleChangeStyle = this.handleChangeStyle.bind(this);
     };
 
     handleModalCard(e) {
@@ -90,7 +91,24 @@ export default class ModalDialog extends React.Component {
             id: "showModalCard",
             prop: false
         })
-    }
+    };
+
+    handleChangeStyle(e) {
+        e.preventDefault();
+
+        let wrapDefaultClasses = "block-cards__card-one",
+            controlsDefaultClasses = "modal__controls preview-control";
+
+        if (e.target == this.styleColorTrigger) {
+            this.cardWrap.className = wrapDefaultClasses;
+            this.styleColorTrigger.className += " active";
+            this.styleStrokeTrigger.className = controlsDefaultClasses;
+        } else if (e.target == this.styleStrokeTrigger) {
+            this.cardWrap.className += " stroke-style";
+            this.styleColorTrigger.className = controlsDefaultClasses;
+            this.styleStrokeTrigger.className += " active";
+        }
+    };
 
     componentDidUpdate() {
         let typeWrite = (item, i, callback) => {
@@ -106,16 +124,10 @@ export default class ModalDialog extends React.Component {
                     }
                     // add bank style to card
                     if (i == 4) {
-                        this.bankIcon.style.backgroundImage = this.props.style == "stroke" ?
-                        "url(img_opt/frame-customization/" + item.bankIcon + "-bl.svg)" :
-                        "url(img_opt/frame-customization/" + item.bankIcon + "-wh.svg)";
-
-                        this.systemIcon.style.backgroundImage = this.props.style == "stroke" ?
-                            "url(img_opt/frame-customization/" + item.systemIcon + "-bl.svg)" :
-                            "url(img_opt/frame-customization/" + item.systemIcon + "-wh.svg)";
-
-                        // check bankSettingsType options (color||stroke)
-                        this.props.style == "color" ? this.card.style.backgroundColor = item.bg : this.card.style.borderColor = item.bg;
+                        this.bankIcon.style.backgroundImage = "url(img_opt/frame-customization/" + item.bankIcon + "-wh.svg)";
+                        this.systemIcon.style.backgroundImage = "url(img_opt/frame-customization/" + item.systemIcon + "-wh.svg)";
+                        this.card.style.boxShadow = this.card.style.boxShadow = "inset 0 0 0 3px " + item.bg;
+                        this.card.style.backgroundColor = item.bg;
                         this.card.className += " identified";
                     }
                     // wait for a while and call this function again for next character
@@ -164,8 +176,19 @@ export default class ModalDialog extends React.Component {
                 {this.props.show && <div className="modal">
                     <div className="modal__dialog">
                         <div className="modal__content">
+                            <div className="modal__top">
+                                <a ref={(styleColorTrigger) => {this.styleColorTrigger = styleColorTrigger}}
+                                   className={"modal__controls preview-control " + (this.props.style === "color" && "active")}
+                                   href="#"
+                                   onClick={this.handleChangeStyle}>Смена цвета</a>
+                                <a ref={(styleStrokeTrigger) => {this.styleStrokeTrigger = styleStrokeTrigger}}
+                                   className={"modal__controls preview-control " + (this.props.style === "stroke" && "active")}
+                                   href="#"
+                                   onClick={this.handleChangeStyle}>Смена обводки</a>
+                            </div>
                             <div className="block-cards colors-preview">
-                                <div className={this.props.style == "color" ? "block-cards__card-one" : "block-cards__card-one stroke-style"}>
+                                <div ref={(cardWrap) => {this.cardWrap = cardWrap}}
+                                     className={"block-cards__card-one " + (this.props.style === "stroke" && "stroke-style")}>
                                     <div ref={(card) => {this.card = card}} className="block-cards__card-one__card">
                                         <div className="wrap-mps">
                                             <div className="bank-logo">

@@ -976,12 +976,23 @@ body {
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin: 0 15px;
+        }
+        &__top {
+            margin-top: 30px;
+        }
+        .preview-control {
+            color: #90a4ae;
+
+            &.active {
+                color: #00b8d4;
+            }
         }
     }
     .block-cards {
         &.colors-preview {
             background: none;
-            margin: 50px auto;
+            margin: 20px auto 50px;
             padding: 0;
             display: block;
             width: 100%;
@@ -990,11 +1001,15 @@ body {
                 margin: 0;
                 width: 30rem;
                 max-width: 30rem;
-
+                &:not(.stroke-style) {
+                   .block-cards__card-one__card {
+                       box-shadow: none !important;
+                   }
+                }
                 &.stroke-style {
                     .block-cards__card-one__card {
-                        background: transparent;
-                        border: 3px solid #4bbabb;
+                        background: transparent !important;
+                        box-shadow: 0 0 0 3px #4bbabb inset;
                         transition: border-color 0.2s cubic-bezier(0.4, 0, 1, 1);
 
                         label,
@@ -1004,6 +1019,51 @@ body {
                         .border-bottom {
                             border-color: #000000;
                         }
+                    }
+                    .bank-icon[style*="alfa-wh"] {
+                        background-image: url("../img_opt/frame-customization/alfa-bl.svg") !important;
+                    }
+                    .bank-icon[style*="rosevrobank-wh"] {
+                        background-image: url("../img_opt/frame-customization/rosevrobank-bl.svg") !important;
+                    }
+                    .bank-icon[style*="sovkom-wh"] {
+                        background-image: url("../img_opt/frame-customization/sovkom-bl.svg") !important;
+                    }
+                    .bank-icon[style*="binbank-wh"] {
+                        background-image: url("../img_opt/frame-customization/binbank-bl.svg") !important;
+                    }
+                    .bank-icon[style*="bsp-wh"] {
+                        background-image: url("../img_opt/frame-customization/bsp-bl.svg") !important;
+                    }
+                    .bank-icon[style*="otkrytie-wh"] {
+                        background-image: url("../img_opt/frame-customization/otkrytie-bl.svg") !important;
+                    }
+                    .bank-icon[style*="ceb-wh"] {
+                        background-image: url("../img_opt/frame-customization/ceb-bl.svg") !important;
+                    }
+                    .bank-icon[style*="hmb-wh"] {
+                        background-image: url("../img_opt/frame-customization/hmb-bl.svg") !important;
+                    }
+                    .bank-icon[style*="hcb-wh"] {
+                        background-image: url("../img_opt/frame-customization/hcb-bl.svg") !important;
+                    }
+                    .bank-icon[style*="cmpb-wh"] {
+                        background-image: url("../img_opt/frame-customization/cmpb-bl.svg") !important;
+                    }
+                    .bank-icon[style*="uniastrum-wh"] {
+                        background-image: url("../img_opt/frame-customization/uniastrum-bl.svg") !important;
+                    }
+                    .bank-icon[style*="locko-wh"] {
+                        background-image: url("../img_opt/frame-customization/locko-bl.svg") !important;
+                    }
+                    .mps-icon[style*="visa-wh"] {
+                        background-image: url("../img_opt/frame-customization/visa-bl.svg") !important;
+                    }
+                    .mps-icon[style*="mc-wh"] {
+                        background-image: url("../img_opt/frame-customization/mc-bl.svg") !important;
+                    }
+                    .mps-icon[style*="mir-wh"] {
+                        background-image: url("../img_opt/frame-customization/mir-bl.svg") !important;
                     }
                 }
             }
