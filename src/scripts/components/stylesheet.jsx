@@ -23,7 +23,7 @@ const STYLESHEET = ({settings}) => {
                             settings.cardSenderImage = settings.cardSenderImage ? settings.cardSenderImage : "";
                             return "border-color: transparent !important; background-color: transparent !important; background-image: url('" + settings.cardSenderImage + "') !important;"
                         } else if (settings.cardBg === 'cardStroke') {
-                            return "background: none !important; border-color:" + (settings.cardSenderStrokeColor ? settings.cardSenderStrokeColor : "#cccccc" ) + " !important;"
+                            return "background: none !important; box-shadow: none !important; border-color:" + (settings.cardSenderStrokeColor ? settings.cardSenderStrokeColor : "#cccccc" ) + " !important;"
                         } else if (settings.cardBg === 'cardColor') {
                             return "background-color:" + settings.cardSenderColor + " !important;" + "border-color:" + settings.cardSenderColor + " !important;";
                         }
@@ -41,7 +41,7 @@ const STYLESHEET = ({settings}) => {
                             settings.cardRecipientImage = settings.cardRecipientImage ? settings.cardRecipientImage : "";
                             return "border-color: transparent !important; background-color: transparent !important; background-image: url('" + settings.cardRecipientImage + "') !important;"
                         } else if (settings.cardBg === 'cardStroke') {
-                            return "background: none !important; border-color:" + (settings.cardRecipientStrokeColor ? settings.cardRecipientStrokeColor : "#cccccc" ) + " !important;"
+                            return "background: none !important; box-shadow: none !important; border-color:" + (settings.cardRecipientStrokeColor ? settings.cardRecipientStrokeColor : "#cccccc" ) + " !important;"
                         } else if (settings.cardBg === 'cardColor') {
                             return "background-color:" + settings.cardRecipientColor + " !important;" + "border-color:" + settings.cardRecipientColor + " !important;";
                         }
